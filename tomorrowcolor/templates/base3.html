@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load i18n %}
+
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <!--<div class="button"> -->
+    <div class="row">
+          <class="form-toolbar">
+          <a class="nav-link" href="{% url 'about' %}">{% trans "About" %}</a>
+          </>
+          <class="form-toolbar">
+          <a class="nav-link" href="{% url 'mission' %}">{% trans "Mission" %}</a>
+          </>
+          <class="form-toolbar">
+          {# URL provided by django-allauth/account/urls.py #}
+          <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
+          </>
+          <a class="nav-link"  href="{% url 'about' %}">{% trans "Sign Up" %}</a>
+          <button type="button" class="btn btn-primary">Primary</button>
+          <span class="btn btn-info" role="button" href="{% url 'mission' %}" >Link Button</span>
+          <a class="nav-link" href="{% url 'mission' %}">Mission 2 </a>
+          <input type="button" class="btn btn-info" value="Input Button" onclick="location.href = "{% url 'mission' %}";">
+          <input type="button" class="btn btn-danger" value={% trans "Mission" %} onclick=" mission()">
+
+          <script>
+            function mission()
+                {
+               location.href = "{% url 'mission' %}";
+               } 
+          </script>
+
+        </div>
+    <br>
+    <br>
+    <button type="button" class="btn btn-outline-dark">{% trans "About" %}</button>
+    <button type="button" class="btn btn-outline-primary">{% trans "About" %}</button>
+    <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-outline-danger">Danger</button>
+    <a class="btn btn-primary" href="#" role="button">Link</a>
+    <br>
+    </div>  
+    <br>  
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap-theme.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+</body>

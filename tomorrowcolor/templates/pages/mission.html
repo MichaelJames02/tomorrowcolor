@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% load staticfiles %}
+
+<head>
+
+</head>
+    # Loads the D
+    <h1>{% trans 'Log in' %}</h1>
+    <label>{% trans 'Username' %}</label>
+    <input id='password' type='text'/>
+    <label>{% trans 'Password' %}</label>
+    <input id='password' type='password'/>
+
+<body>
+    <div>
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+        <br>
+        <h1>This is tomorrowColor mission statement!</h1>
+        <h2>Our mission statement is simple and clear</h2>
+        <p>1. First, We want our products to get accross the globe, it could be digital or physical products</p>
+        <p>2. Second, It's our determination to create life improving apps, It could be for any purpose that add meaning to life</p>
+        <p>3. Third, Like our name (tomorrowColor)suggests, our products and services should be a true color to tomorrow. That means, we must strive for good quality and poupularity</p>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+
+    </div>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap-theme.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/mission.css' %}">
+
+</body>
