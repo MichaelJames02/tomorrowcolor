@@ -271,6 +271,4 @@ SOCIALACCOUNT_ADAPTER = 'tomorrowcolor.users.adapters.SocialAccountAdapter'
 
 # Your stuff...
 # ------------------------------------------------------------------------------
-# Activate Django-Heroku.
-import django_heroku
-django_heroku.settings(locals())
+
