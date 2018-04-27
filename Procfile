@@ -1,1 +1,2 @@
-web: gunicorn -c gunicorn_config.py tomorrowcolor.wsgi
+web: gunicorn config.wsgi:application
+worker: celery -A tasks worker --app=tomorrowcolor.taskapp --loglevel=info
