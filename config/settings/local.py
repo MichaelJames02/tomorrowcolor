@@ -12,7 +12,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "0.0.0.0",
     "127.0.0.1",
-    "https://calm-waters-57061.herokuapp.com/",
+    
 ]
 
 # CACHES
