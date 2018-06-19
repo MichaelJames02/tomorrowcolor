@@ -15,3 +15,18 @@ class User(AbstractUser):
 
     def get_absolute_url(self):
         return reverse('users:detail', kwargs={'username': self.username})
+
+
+class Company(models.Model):
+	company_name = models.CharField(max_length=20)
+	company_location = models.CharField(max_length=20)
+	number_of_employees = models.IntegerField() 
+	employees_avarage_salary = models. BigIntegerField()
+	created_day_and_time = DateTimeField(auto_now=True)
+
+	class Meta:
+        verbose_name = _("Company")
+        verbose_name_plural = _("Companies")
+
+	def __str__(self):
+		return self.company_name
